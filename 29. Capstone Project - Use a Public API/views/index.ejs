@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joke Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Chuck Norris joke generator</h1>
+      <form action="/get-joke" method="post">
+        <input type="text" name="word" placeholder="Find jokes on..." />
+        <div class="text">
+          <h3 class="joke"><%= joke %></h3>
+          <!-- <h3 class="category"></h3> -->
+          <!-- <input type="submit" value="" class="twitter-button" formaction="/get-joke"> -->
+        </div>
+        <!-- <input type="submit" value="Press for &#10; a joke" id="getJoke" /> -->
+        <input type="submit" value="Press for a joke" id="getJoke" />
+      </form>
+    </div>
+  </body>
+</html>

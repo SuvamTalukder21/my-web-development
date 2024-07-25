@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs', { pageTitle: title }) %>
+
+<div class="container my-5">
+  <div class="float-start me-5 mb-5">
+    <img
+      src="https://covers.openlibrary.org/b/isbn/<%= isbn %>-M.jpg"
+      alt="Book Image"
+    />
+  </div>
+
+  <div class="fs-1 fw-bold"><%= title %></div>
+
+  <p class="fs-5 my-2">
+    <span class="fs-4 text-uppercase fw-semibold">Author:</span> <%= author %>
+  </p>
+
+  <p class="fs-5 my-2">
+    <span class="fs-4 text-uppercase fw-semibold">Published on:</span>
+    <%= publication_year %>
+  </p>
+
+  <div class="my-2">
+    <span class="fs-4 text-uppercase fw-semibold me-1">
+      How much do I recommend it:
+    </span>
+    <span class="text-warning mb-1 fs-5">
+      <span class="ms-1"> <%= rating %> &nbsp; </span>
+      <% for( let star = 1; star <= 5; star++ ) { %> <% if (star <=
+      Math.floor(rating)) { %>
+      <i class="fa fa-star"></i>
+      <% } else if (star === Math.floor(rating) + 1 && rating % 1 != 0) { %>
+      <i class="fas fa-star-half-alt"></i>
+      <% } else { %>
+      <i class="far fa-star"></i>
+      <% } %> <% } %>
+    </span>
+  </div>
+
+  <p class="fs-5 my-2">
+    <span class="fs-4 text-uppercase fw-semibold">Description:</span>
+    <%= description %>
+  </p>
+
+  <div class="mt-4 fs-5">
+    <div class="fs-3 text-uppercase fw-semibold mb-1">My Review:</div>
+    <p class="mt-1">&emsp;<%- review.replace(/\n\t/g, "<br />&emsp;") %></p>
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

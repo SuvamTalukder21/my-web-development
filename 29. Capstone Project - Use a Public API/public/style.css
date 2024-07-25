@@ -1,0 +1,118 @@
+body {
+  /* background: url("https://1.bp.blogspot.com/-CYQ5F9q6YlE/VIX6zgIg8EI/AAAAAAAAGwU/nkOudSDpI18/s1600/website-background-rough-surface.jpg"); */
+  background: url("https://source.unsplash.com/random/1920x1080");
+}
+
+.text {
+  width: 500px;
+  /* background: #fff; */
+  /* margin-top: 150px; */
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 5px #888888;
+  /* border-radius: 5px; */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.joke {
+  padding: 40px;
+}
+
+.category {
+  padding-bottom: 40px;
+}
+
+/* #getJoke {
+  float: left;
+  box-shadow: 10px 10px 5px #888888;
+} */
+
+/* .twitter-share-button {
+  float: right;
+  box-shadow: 10px 10px 5px #888888;
+} */
+
+form {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#getJoke {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  /* padding: 10px 25px; */
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  /* background: transparent; */
+  background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 75%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+}
+
+#getJoke:before,
+#getJoke:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #c797eb;
+  transition: all 0.5s ease;
+}
+
+/* #getJoke:before {
+  height: 0%;
+  width: 2px;
+} */
+
+/* #getJoke:after {
+  width: 0%;
+  height: 2px;
+} */
+
+/* #getJoke:hover:before {
+  height: 100%;
+} */
+
+/* #getJoke:hover:after {
+  width: 100%;
+} */
+
+#getJoke:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  /* border: 5px solid red; */
+}
+
+#getJoke:hover::after {
+  animation-name: left-right;
+  animation-duration: 0.5ms;
+}
+
+@keyframes left-right {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+/* #getJoke:hover span {
+  color: #c797eb;
+} */
